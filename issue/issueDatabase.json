@@ -1,0 +1,12 @@
+[
+    {
+        "id":1,
+        "idApartament":1,
+        "category":"other",
+        "description":"kettle is not working apartament 3a",
+        "dateAdd":"13-01-2026",
+        "dateSolved":"",
+        "priority":"low",
+        "status":"pending"
+    }
+]
