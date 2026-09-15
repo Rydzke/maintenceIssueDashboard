@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    background-color: #111;
+    color: #eee;
+    font-family: sans-serif;
+}
+section{
+    background-color: #222;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem   ;
+}
+input,select, textarea, button{
+    background-color: inherit;   
+    color: inherit;
+    border-radius: 0.25rem;
+}
