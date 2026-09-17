@@ -9,7 +9,7 @@ fetch('./databaseIssue.json').then((response) => response.json()).then((database
     
     databaseIssue.forEach(issue => {
         let newRow = document.createElement("tr");
-        let namesInJSON = ["id","idApartament","category","description","dateAdd","dateSolved","priority","status"]
+        let namesInJSON = ["id","idApartament","category","description","location","dateAdd","dateSolved","priority","status"]
         namesInJSON.forEach(namefromJSON => {
             createNewCell(newRow, issue[namefromJSON]);
         });
