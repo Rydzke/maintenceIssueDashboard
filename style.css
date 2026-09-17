@@ -15,3 +15,12 @@ input,select, textarea, button{
     color: inherit;
     border-radius: 0.25rem;
 }
+header{
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+
+}
+header img{
+    height: 4rem;
+}
