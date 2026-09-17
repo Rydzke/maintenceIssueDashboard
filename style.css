@@ -35,6 +35,8 @@ table{
     width: 100%;
     text-align: center;
     border-collapse: collapse;
+    display: block;
+    overflow: scroll;
 }
 td, th{
     border: 1px solid;
@@ -42,6 +44,7 @@ td, th{
 }
 form{
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
     align-items: center;
