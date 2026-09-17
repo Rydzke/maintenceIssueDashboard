@@ -1,11 +1,15 @@
+:root{
+    --backgroundColor: #222;
+    --textColor: #eee;
+}
 body{
     margin: 0;
-    background-color: #111;
-    color: #eee;
+    background-color: hsl(from var(--backgroundColor) h s calc(l - 10));
+    color: var(--textColor);
     font-family: sans-serif;
 }
 section{
-    background-color: #222;
+    background-color: var(--backgroundColor);
     margin: 1rem;
     padding: 1rem;
     border-radius: 0.5rem   ;
@@ -16,11 +20,24 @@ input,select, textarea, button{
     border-radius: 0.25rem;
 }
 header{
+    background-color: var(--backgroundColor);
     display: flex;
     justify-content: center;
-    background-color: #222;
 
 }
 header img{
     height: 4rem;
+}
+main section h1{
+    text-align: center;
+}
+table{
+    width: 100%;
+    text-align: center;
+}
+form{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
