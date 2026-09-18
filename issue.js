@@ -6,20 +6,21 @@ export function getDatabase(databaseName, force) {
         });
     }
 }
-export function dipslayIssue() {
+export function addCellsToTable(tableId, databaseName) {
     function createNewCell(fatherElement,text) {
         let newCell = document.createElement("td");
         newCell.innerText = text;
         fatherElement.appendChild(newCell);
     }
-    
-    let issueList = document.getElementById("issueList");
-    databaseIssue.forEach(issue => {
+    let database = JSON.parse(localStorage.getItem(databaseName));
+    let table = document.getElementById(tableId);
+    database.forEach(databaseElement => {
         let newRow = document.createElement("tr");
-        let namesInJSON = ["id","idApartament","category","description","location","dateAdd","dateSolved","priority","status"]
-        namesInJSON.forEach(namefromJSON => {
-            createNewCell(newRow, issue[namefromJSON]);
+        let keysInJSON = Object.keys(databaseElement)
+        console.log(databaseElement);
+        keysInJSON.forEach(namefromJSON => {
+            createNewCell(newRow, databaseElement[namefromJSON]);
         });
-        issueList.appendChild(newRow);
+        table.appendChild(newRow);
     });
 }
