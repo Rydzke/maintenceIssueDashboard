@@ -14,9 +14,9 @@
         <section>
             <h1>Add new issue</h1>
             <form id="addIssue">
-                <label for="apartament">apartament</label>
-                <select name="apartament" id="apartament">
-                    <!-- list All apartament -->
+                <label for="idApartament">apartament</label>
+                <select name="idApartament" id="idApartament">
+                    <option value="1">Boss</option>
                 </select>
                 <label for="category">category</label>
                 <select name="category" id="category">
@@ -24,8 +24,14 @@
                 </select>
                 <label for="description">description</label>
                 <textarea name="description" id="description"></textarea>
-                <label for="prioritty"></label>
-                <select name="prioritty" id="prioritty">
+                <label for="priority">Priority</label>
+                <select name="priority" id="priority">
+                    <option value="low">low</option>
+                    <option value="mediium">medium</option>
+                    <option value="high">high</option>
+                </select>
+                <label for="status">Status</label>
+                <select name="status" id="status">
                     <option value="pending">Pending</option>
                     <option value="inProgress">In progress</option>
                     <option value="resolved">resolved</option>
@@ -40,9 +46,10 @@
                 <tr>
                     <th>ID</th>
                     <th>Apartament ID</th>
+                    <!-- <th>Apartament Name</th> -->
                     <th>Category</th>
                     <th>Description</th>
-                    <th>Location</th>
+                    <!-- <th>Location</th> -->
                     <th>Add Date</th>
                     <th>Solved Date</th>
                     <th>Priority</th>
