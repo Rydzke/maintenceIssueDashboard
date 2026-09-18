@@ -1,7 +1,8 @@
-export function getIssueAndApartament() {   
-    if (!(localStorage.getItem("databaseIssue"))){
-        fetch('./databaseIssue.json').then((response) => response.json()).then((databaseIssue) => {
-            localStorage.setItem("databaseIssue",JSON.stringify(databaseIssue));
+// import database if don't exist to localstorage or if somone want force refresh
+export function getDatabase(databaseName, force) {
+    if (!(localStorage.getItem(databaseName)) || force) {
+        fetch(`./${databaseName}.json`).then((response) => response.json()).then((database) => {
+            localStorage.setItem(databaseName,JSON.stringify(database));
         });
     }
 }
