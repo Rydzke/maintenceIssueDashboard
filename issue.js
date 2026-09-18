@@ -17,7 +17,6 @@ export function addCellsToTable(tableId, databaseName) {
     database.forEach(databaseElement => {
         let newRow = document.createElement("tr");
         let databaseKeys = Object.keys(databaseElement)
-        console.log(databaseElement);
         databaseKeys.forEach(namefromJSON => {
             createNewCell(newRow, databaseElement[namefromJSON]);
         });
